@@ -1,6 +1,7 @@
 package theme1
 
-var List = map[string]string{"login": `{{define "login"}}
+var List = map[string]string{
+	"login": `{{define "login"}}
     <!DOCTYPE html>
     <html>
     <head>
@@ -84,7 +85,7 @@ var List = map[string]string{"login": `{{define "login"}}
 
     <div class="text-center text-muted">
         <small>
-            <strong>Powered by <a href="https://github.com/GoAdminGroup/go-admin"
+            <strong>Powered by <a href="https://github.com/go-hq/go-admin"
                                   target="_blank">GoAdmin</a></strong>
         </small>
     </div>
@@ -166,4 +167,5 @@ var List = map[string]string{"login": `{{define "login"}}
     </script>
 
     </html>
-{{end}}`}
+{{end}}`,
+}

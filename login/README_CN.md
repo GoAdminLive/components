@@ -10,17 +10,17 @@
 package main
 
 import (
-	_ "github.com/GoAdminGroup/go-admin/adapter/gin"	    
-        _ "github.com/GoAdminGroup/go-admin/adapter/gin"
-        _ "github.com/GoAdminGroup/go-admin/modules/db/drivers/mysql"
+	_ "github.com/go-hq/go-admin/adapter/gin"	    
+        _ "github.com/go-hq/go-admin/adapter/gin"
+        _ "github.com/go-hq/go-admin/modules/db/drivers/mysql"
         // 引入theme2登录页面主题，如不用，可以不导入
-        _ "github.com/GoAdminGroup/components/login/theme2"
+        _ "github.com/go-hq/components/login/theme2"
 	
-	"github.com/GoAdminGroup/components/login"
-	"github.com/GoAdminGroup/go-admin/engine"
-	"github.com/GoAdminGroup/go-admin/examples/datamodel"
-	"github.com/GoAdminGroup/go-admin/plugins/admin"
-	"github.com/GoAdminGroup/go-admin/plugins/admin/modules/captcha"
+	"github.com/go-hq/components/login"
+	"github.com/go-hq/go-admin/engine"
+	"github.com/go-hq/go-admin/examples/datamodel"
+	"github.com/go-hq/go-admin/plugins/admin"
+	"github.com/go-hq/go-admin/plugins/admin/modules/captcha"
 	"github.com/gin-gonic/gin"
 	"io/ioutil"
 )

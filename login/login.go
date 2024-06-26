@@ -8,14 +8,14 @@ import (
 	textTemplate "text/template"
 	"time"
 
-	"github.com/GoAdminGroup/components/login/theme1"
-	"github.com/GoAdminGroup/go-admin/modules/logger"
-	"github.com/GoAdminGroup/go-admin/modules/utils"
-	captcha2 "github.com/GoAdminGroup/go-admin/plugins/admin/modules/captcha"
-	template2 "github.com/GoAdminGroup/go-admin/template"
-	"github.com/GoAdminGroup/go-admin/template/login"
-	"github.com/GoAdminGroup/go-admin/template/types"
 	"github.com/dchest/captcha"
+	"github.com/go-hq/components/login/theme1"
+	"github.com/go-hq/go-admin/modules/logger"
+	"github.com/go-hq/go-admin/modules/utils"
+	captcha2 "github.com/go-hq/go-admin/plugins/admin/modules/captcha"
+	template2 "github.com/go-hq/go-admin/template"
+	"github.com/go-hq/go-admin/template/login"
+	"github.com/go-hq/go-admin/template/types"
 )
 
 var (
@@ -63,10 +63,12 @@ func Get(cfg ...Config) *Login {
 		}
 
 		if cfg[0].TencentWaterProofWallData.AppID != "" {
-			captcha2.Add(CaptchaDriverKeyTencent, &TencentCaptcha{
-				AppID:     cfg[0].TencentWaterProofWallData.AppID,
-				AppSecret: cfg[0].TencentWaterProofWallData.AppSecret,
-			})
+			captcha2.Add(
+				CaptchaDriverKeyTencent, &TencentCaptcha{
+					AppID:     cfg[0].TencentWaterProofWallData.AppID,
+					AppSecret: cfg[0].TencentWaterProofWallData.AppSecret,
+				},
+			)
 		}
 
 		if cfg[0].Theme == "" {

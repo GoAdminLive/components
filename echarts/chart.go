@@ -4,10 +4,10 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	template2 "github.com/GoAdminGroup/go-admin/template"
 	"github.com/go-echarts/go-echarts/charts"
 	"github.com/go-echarts/go-echarts/datasets"
 	"github.com/go-echarts/go-echarts/templates"
+	template2 "github.com/go-hq/go-admin/template"
 	"html/template"
 	"regexp"
 	"strings"
@@ -49,7 +49,8 @@ func (c *Chart) GetContent() template.HTML {
 
 	buf, chartId := c.getContent()
 
-	repl := strings.NewReplacer(`<meta charset="utf-8">`, "",
+	repl := strings.NewReplacer(
+		`<meta charset="utf-8">`, "",
 		`<title>Awesome go-echarts</title>`, "",
 		`<script src="https://go-echarts.github.io/go-echarts-assets/assets/echarts.min.js"></script>`, "",
 		`<script src="https://go-echarts.github.io/go-echarts-assets/assets/maps/china.js"></script>`, "",
@@ -57,7 +58,8 @@ func (c *Chart) GetContent() template.HTML {
 		`<script src="https://go-echarts.github.io/go-echarts-assets/assets/echarts-liquidfill.min.js"></script>`, "",
 		`<link href="https://go-echarts.github.io/go-echarts-assets/assets/bulma.min.css" rel="stylesheet">`, "",
 		`<div class="select" style="margin-right:10px; margin-top:10px; position:fixed; right:10px;"></div>`, "",
-		`container`, "echarts-container")
+		`container`, "echarts-container",
+	)
 
 	return template.HTML(repl.Replace(buf.String())) + template.HTML(fmt.Sprintf(resizeJS, chartId))
 }
