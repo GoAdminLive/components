@@ -2,7 +2,7 @@ package login
 
 import (
 	"encoding/json"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/url"
 	"strings"
@@ -104,7 +104,7 @@ func (c *TencentCaptcha) Validate(token string) bool {
 	defer func() {
 		_ = res.Body.Close()
 	}()
-	body, err := ioutil.ReadAll(res.Body)
+	body, err := io.ReadAll(res.Body)
 
 	if err != nil {
 		return false
