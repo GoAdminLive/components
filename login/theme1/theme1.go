@@ -1,6 +1,6 @@
 package theme1
 
-import "github.com/go-hq/go-admin/template"
+import "github.com/GoAdminLive/go-admin/template"
 
 type Theme1 struct {
 	*template.BaseComponent

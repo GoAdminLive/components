@@ -85,7 +85,7 @@ var List = map[string]string{
 
     <div class="text-center text-muted">
         <small>
-            <strong>Powered by <a href="https://github.com/go-hq/go-admin"
+            <strong>Powered by <a href="https://github.com/GoAdminLive/go-admin"
                                   target="_blank">GoAdmin</a></strong>
         </small>
     </div>

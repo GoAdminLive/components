@@ -9,7 +9,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/go-hq/go-admin/modules/logger"
+	"github.com/GoAdminLive/go-admin/modules/logger"
 )
 
 const (

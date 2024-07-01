@@ -1,8 +1,8 @@
 package theme3
 
 import (
-	"github.com/go-hq/components/login"
-	"github.com/go-hq/go-admin/template"
+	"github.com/GoAdminLive/components/login"
+	"github.com/GoAdminLive/go-admin/template"
 )
 
 type Theme3 struct {

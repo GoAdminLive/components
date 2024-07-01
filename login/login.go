@@ -8,14 +8,14 @@ import (
 	textTemplate "text/template"
 	"time"
 
+	"github.com/GoAdminLive/components/login/theme1"
+	"github.com/GoAdminLive/go-admin/modules/logger"
+	"github.com/GoAdminLive/go-admin/modules/utils"
+	captcha2 "github.com/GoAdminLive/go-admin/plugins/admin/modules/captcha"
+	template2 "github.com/GoAdminLive/go-admin/template"
+	"github.com/GoAdminLive/go-admin/template/login"
+	"github.com/GoAdminLive/go-admin/template/types"
 	"github.com/dchest/captcha"
-	"github.com/go-hq/components/login/theme1"
-	"github.com/go-hq/go-admin/modules/logger"
-	"github.com/go-hq/go-admin/modules/utils"
-	captcha2 "github.com/go-hq/go-admin/plugins/admin/modules/captcha"
-	template2 "github.com/go-hq/go-admin/template"
-	"github.com/go-hq/go-admin/template/login"
-	"github.com/go-hq/go-admin/template/types"
 )
 
 var (
